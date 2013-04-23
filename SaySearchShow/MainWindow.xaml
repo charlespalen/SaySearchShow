@@ -1,0 +1,23 @@
+﻿<Window x:Class="FlickrKinectPhotoFun.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:FlickrKinectPhotoFun"
+        Title="Say Search Show" x:Name="mainWin" Width="1200" Height="1080" Loaded="Window_Loaded" Background="Black" WindowState="Maximized" WindowStyle="None" KeyDown="Window_KeyDown" StateChanged="mainWin_StateChanged">
+    <Canvas x:Name="masterParent"  Height="940" Width="1180" Background="Black">
+        <Canvas.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="About" Click="AboutMenuItem_Click"/>
+            <MenuItem Header="Close" Click="CloseMenuItem_Click"/>
+        </ContextMenu>
+        </Canvas.ContextMenu>
+        <local:contentViewer x:Name="cntVwr" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <DockPanel x:Name="dockDude">
+            <local:SpeechRecognizeText x:Name="voiceRecText" DockPanel.Dock="Top" Margin="0,20,0,0" />
+            <local:SpeechRecognizeText x:Name="srchResultText" DockPanel.Dock="Top" Margin="0,20,0,0" />
+        </DockPanel>
+        <DockPanel x:Name="levelDock">
+            <local:audioLevels x:Name="levlBar" DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50"/>
+        </DockPanel>
+        <Image x:Name="splashImage" Source="Resources/MainLogo.jpg" Canvas.Left="146" Canvas.Top="76" />
+    </Canvas>
+</Window>

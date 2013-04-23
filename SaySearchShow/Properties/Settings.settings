@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FlickrKinectPhotoFun.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="textDelayTimeinSec" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="photoDisplayTimeMinSec" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="photoDisplayTimeMaxSec" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="maximumDownloadTimeoutSec" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="imageScaleMultiplier" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">1.5</Value>
+    </Setting>
+    <Setting Name="flickrAPIKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">f9592cc4a06c185dd198673fd430e4f5</Value>
+    </Setting>
+    <Setting Name="flickrSharedSecret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7e750c3e4665a9ec</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

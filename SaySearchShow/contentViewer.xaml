@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="FlickrKinectPhotoFun.contentViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:cm="clr-namespace:System.ComponentModel;assembly=System"
+             d:DesignHeight="1280" d:DesignWidth="1024" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <cm:BackgroundWorker x:Key="backgroundWorker"
+                             DoWork="BackgroundWorker_DoWork"
+                             RunWorkerCompleted="BackgroundWorker_RunWorkerCompleted"
+                             WorkerReportsProgress="False"
+                             WorkerSupportsCancellation="True">
+        </cm:BackgroundWorker>
+    </UserControl.Resources>
+    <Grid x:Name="imgParent" ClipToBounds="False">
+        <Grid x:Name="mainHolder" ClipToBounds="False"/>
+        <Canvas x:Name="CaptionContent" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Orientation="Vertical" x:Name="photoDetails" Width="500">
+                <TextBlock Name="phot_title" Text="" TextWrapping="Wrap" FontFamily="Helvetica Neue LT Std" TextAlignment="Left" Foreground="White">
+                    <TextBlock.Effect>
+                    <DropShadowEffect
+                      ShadowDepth="2"
+                      Direction="330"
+                      Color="Black"
+                      Opacity="0.95"
+                     BlurRadius="6"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock x:Name="HTMLphot_description" Text="" TextWrapping="Wrap" FontFamily="Helvetica Neue LT Std" TextAlignment="Left" Foreground="White">
+                    <TextBlock.Effect>
+                    <DropShadowEffect
+                      ShadowDepth="2"
+                      Direction="330"
+                      Color="Black"
+                      Opacity="0.95"
+                     BlurRadius="6"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Name="phot_author" Text="" TextWrapping="Wrap"  FontFamily="Helvetica Neue LT Std" TextAlignment="Left" Foreground="White">
+                    <TextBlock.Effect>
+                    <DropShadowEffect
+                      ShadowDepth="2"
+                      Direction="330"
+                      Color="Black"
+                      Opacity="0.95"
+                     BlurRadius="6"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</UserControl>

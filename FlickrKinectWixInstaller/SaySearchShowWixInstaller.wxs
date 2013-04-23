@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi' xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+
+  <Product Name='Say Search Show' Id='DC4F8B8E-DA3F-48f1-BF58-9881C7433596' UpgradeCode='C7E934F4-99E8-41ad-953F-DEF677C4CD84'
+    Language='1033' Codepage='1252' Version='1.0.2' Manufacturer='Transcending Digital LLC'>
+
+    <Package Id='*' Keywords='Installer' Description="Say Search Show 1.0.2 Installer"
+      Comments='The initial installer of Say Search Show' Manufacturer='Transcending Digital LLC'
+      InstallerVersion='100' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+	  
+    <Media Id='1' Cabinet='Sample.cab' EmbedCab='yes' DiskPrompt='CD-ROM #1' />
+    <Property Id='DiskPrompt' Value="Say Search Show 1.0.2 [1]" />
+	
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <Directory Id='ProgramFilesFolder' Name='PFiles'>
+        <Directory Id='SaySearchShow' Name='SaySearchShow'>
+          <Directory Id='INSTALLDIR' Name='SaySearchShow'>
+			<Component Id='MainExecutable' Guid='40BC6E0F-6516-4dd1-8DCF-839BEEF28B4F'>
+				<File Id='FoobarEXE' Name='SaySearchShow.exe' DiskId='1' Source='../SaySearchShow/bin/Release/SaySearchShow.exe' KeyPath='yes'>
+				<Shortcut Id="startmenuSMS" Directory="ProgramMenuDir" Name="Say Search Show"
+                  WorkingDirectory='INSTALLDIR' Icon="SaySearchShowIcon.ico" IconIndex="0" Advertise="yes" />
+				<Shortcut Id="desktopSMS" Directory="DesktopFolder" Name="Say Search Show"
+                  WorkingDirectory='INSTALLDIR' Icon="SaySearchShowIcon.ico" IconIndex="0" Advertise="yes" />
+				</File>
+            </Component>
+			
+            <Component Id='HelperLibrary' Guid='B954A379-DC3B-4a99-BE9A-D01D96457A4B'>
+              <File Id='HelperDLL' Name='FlickrNet.dll' DiskId='1' Source='../SaySearchShow/bin/Release/FlickrNet.dll' KeyPath='yes' />
+            </Component>
+            <Component Id='HelperLibraryTwo' Guid='D4835DFE-A121-4c03-866A-F81331C716B4'>
+              <File Id='HelperDLLTwo' Name='Microsoft.Speech.dll' DiskId='1' Source='../SaySearchShow/bin/Release/Microsoft.Speech.dll' KeyPath='yes' />
+            </Component>
+            <Component Id='HelperLibraryThree' Guid='C5CBAECF-FC49-4f48-93A4-88AC8B52A2DA'>
+              <File Id='HelperDLLThree' Name='Microsoft.Kinect.dll' DiskId='1' Source='../SaySearchShow/bin/Release/Microsoft.Kinect.dll' KeyPath='yes' />
+            </Component>
+			
+            <Component Id='Font_Helvetica' Guid='5F3DA418-A8C1-49d7-BDF5-7C8E760D6760'>
+              <File Id='File_FontHelvet' Name='HelveticaNeueLTStd-Lt.otf' DiskId='1' Source='../SaySearchShow/bin/Release/HelveticaNeueLTStd-Lt.otf' KeyPath='yes' />
+            </Component>
+			
+            <Component Id='Manual' Guid='1E8F316D-A60E-4afc-9848-BFB6323745F3'>
+              <File Id='Manual' Name='SaySearchShowManual.txt' DiskId='1' Source='SaySearchShowManual.txt' KeyPath='yes'>
+                <Shortcut Id='startmenuManual' Directory='ProgramMenuDir' Name='Instruction Manual' Advertise='yes' />
+              </File>
+            </Component>
+			
+			<!-- Config File -->
+            <Component Id='SSSConfig' Guid='65D5F585-3112-49b3-BA97-1F415C9123F0'>
+              <File Id='SSSConfigFile' Name='SaySearchShow.exe.config' DiskId='1' Source='../SaySearchShow/bin/Release/SaySearchShow.exe.config' KeyPath='yes'>
+              </File>
+			  <RemoveFile Id='SSSConfigFile' Name='SaySearchShow.exe.config' On='uninstall' />
+            </Component>
+			
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="ProgramMenuDir" Name="Say Search Show">
+          <Component Id="ProgramMenuDir" Guid="2ED6E47C-CD06-4f29-9E14-DE1DF087D785">
+            <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+            <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+          </Component>
+        </Directory>
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+	
+	<Feature Id='Complete' Title='Say Search Show' Description='The complete package.' Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR'>
+		<Feature Id='MainProgram' Title='Program' Description='The main executable.' Level='1'>
+		  <ComponentRef Id='MainExecutable' />
+		  <ComponentRef Id='HelperLibrary' />
+		  <ComponentRef Id='ProgramMenuDir' />
+		  <ComponentRef Id='HelperLibraryTwo' />
+		  <ComponentRef Id='HelperLibraryThree' />
+		  <ComponentRef Id='Font_Helvetica' />
+		  <ComponentRef Id='SSSConfig' />
+	  </Feature>
+	  
+      <Feature Id='Documentation' Title='Description' Description='The instruction manual.' Level='1000'>
+        <ComponentRef Id='Manual' />
+      </Feature>
+    </Feature>
+
+	<!-- When using WixUI_InstallDir we need to define a property linking it to our INSTALLDIR variable -->
+	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+	
+	<WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+	<UIRef Id="WixUI_InstallDir" />
+	<UIRef Id="WixUI_ErrorProgressText" />
+	
+	<!-- Replacement of installer images -->
+	<WixVariable Id="WixUIBannerBmp" Overridable="yes" Value="Bitmaps\SaySearchShowTopBanner.jpg"/>
+	<WixVariable Id="WixUIDialogBmp" Overridable="yes" Value="Bitmaps\SaySearchShowMain.jpg"/>
+	
+	<!-- Specification of icons -->
+    <Icon Id="SaySearchShowIcon.ico" SourceFile="SaySearchShowIcon.ico" />
+	<Property Id="ARPPRODUCTICON" Value="SaySearchShowIcon.ico" />
+	
+	<!-- Dot Net Detection -->
+	<PropertyRef Id="NETFRAMEWORK40CLIENT"/>
+	<PropertyRef Id="NETFRAMEWORK40FULL"/>
+	
+	<Condition Message="This application is only supported on Windows Vista, Windows 7, or higher.">
+    <![CDATA[Installed OR (VersionNT >= 600)]]>
+	</Condition>
+
+	<Condition Message="This application requires .NET Framework 4.0. Please install the .NET Framework then run this installer again.">
+		<![CDATA[Installed OR (NETFRAMEWORK40CLIENT OR NETFRAMEWORK40FULL)]]>
+	</Condition>
+	
+	<!-- For upgrading -->
+	<Property Id="PREVIOUSVERSIONSINSTALLED" Secure="yes" />
+	<Upgrade Id="C7E934F4-99E8-41ad-953F-DEF677C4CD84">  
+	   <UpgradeVersion
+		  Minimum="1.0.0" 
+		  IncludeMinimum="yes"
+		  OnlyDetect="no"
+		  Maximum="1.0.2"
+		  IncludeMaximum="no"
+		  Property="PREVIOUSVERSIONSINSTALLED"
+		  />
+	</Upgrade> 
+
+	 <InstallExecuteSequence>
+		<LaunchConditions After='AppSearch'/>
+         <RemoveExistingProducts After="InstallInitialize"/>
+      </InstallExecuteSequence>
+	  
+  </Product>
+</Wix>

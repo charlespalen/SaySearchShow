@@ -1,0 +1,33 @@
+﻿<Window x:Class="FlickrKinectPhotoFun.aboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Say Search Show" Width="300" Height="320" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="5,0,0,0">
+            <TextBlock HorizontalAlignment="Center" Text="Say Search Show" FontSize="15" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Center" Foreground="Black" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock HorizontalAlignment="Center" Text="1.0.3 Alpha Release Supporting Kinect For Windows" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Center" Foreground="Black" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" TextWrapping="Wrap" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased">
+            Say search show is a fun application that allows users to search the full plethora of Flickr with simple voice commands. It was designed for display on projectors or large format monitors.
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Text="How to Use:" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" Foreground="Black" FontWeight="Bold" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock HorizontalAlignment="Left" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" TextWrapping="Wrap" TextOptions.TextRenderingMode="Aliased">
+            To use this application simply say the words "Kinect Show" followed by your search terms. For best results, wait for the user interface to display how many results were found before preforming another search.
+                For optimal voice recognition, use a Kinect For Windows Sensor. If Kinect For Windows isn't available, use the best microphone you have and carefully adjust gain levels.
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Text="Updated: 4/22/2013" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" Foreground="Black" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" Foreground="Black" TextOptions.TextRenderingMode="Aliased">
+                Website:
+            <Hyperlink NavigateUri="http://www.technogumbo.com/projects/say-search-show/" RequestNavigate="Hyperlink_RequestTGO" TextOptions.TextRenderingMode="Aliased">
+                Say Search Show Application Page
+            </Hyperlink>
+            </TextBlock>
+            <Image Source="Resources/TranscendingDigitalLogo.png" Stretch="Uniform" Width="102" HorizontalAlignment="Right" Margin="0,0,5,0" />
+            <TextBlock FontSize="10" HorizontalAlignment="Right" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" Foreground="Black" Margin="0,5,5,0" TextOptions.TextRenderingMode="Aliased">
+                Corporate Sponsor:
+            <Hyperlink NavigateUri="http://www.transcendingdigital.com?r=SaySearchShow" RequestNavigate="Hyperlink_RequestTD">
+                Transcending Digital
+            </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
