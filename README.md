@@ -68,8 +68,11 @@ one of the other express development platforms.
 External Links
 --------------------------------------------------
 [Say Search Show Flickr Application Page](http://www.flickr.com/services/apps/72157631721003670/)
+	
 [Say Search Show Page on Technogumbo](http://www.technogumbo.com/projects/say-search-show/index.php)
+	
 [Flickr Net Project on Codeplex](http://flickrnet.codeplex.com/)
+	
 [Microsoft Speech Platform](http://msdn.microsoft.com/en-us/library/hh361572.aspx)
 	
 License
