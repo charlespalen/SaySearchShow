@@ -8,6 +8,10 @@ The objective of this piece was to provide a fun and inspiring application that 
 large format display to essentially dish out inspiration with a hint of interactivity. Due to the vast creativity of all of the photos 
 on the Flickr platform, it really has been inspiring to see what shows up at times.
 
+Video
+--------------------------------------------------
+There is a [video of version 1.0.1 on youtube](http://www.youtube.com/watch?v=_NKcWOtw0bY).
+	
 How to Use
 --------------------------------------------------
 In order to use the application, just download the "SaySearchShow.msi" application and install it.
