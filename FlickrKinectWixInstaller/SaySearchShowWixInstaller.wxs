@@ -2,14 +2,14 @@
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi' xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
 
   <Product Name='Say Search Show' Id='DC4F8B8E-DA3F-48f1-BF58-9881C7433596' UpgradeCode='C7E934F4-99E8-41ad-953F-DEF677C4CD84'
-    Language='1033' Codepage='1252' Version='1.0.2' Manufacturer='Transcending Digital LLC'>
+    Language='1033' Codepage='1252' Version='1.0.3' Manufacturer='Transcending Digital LLC'>
 
-    <Package Id='*' Keywords='Installer' Description="Say Search Show 1.0.2 Installer"
+    <Package Id='*' Keywords='Installer' Description="Say Search Show 1.0.3 Installer"
       Comments='The initial installer of Say Search Show' Manufacturer='Transcending Digital LLC'
       InstallerVersion='100' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
 	  
     <Media Id='1' Cabinet='Sample.cab' EmbedCab='yes' DiskPrompt='CD-ROM #1' />
-    <Property Id='DiskPrompt' Value="Say Search Show 1.0.2 [1]" />
+    <Property Id='DiskPrompt' Value="Say Search Show 1.0.3 [1]" />
 	
     <Directory Id='TARGETDIR' Name='SourceDir'>
       <Directory Id='ProgramFilesFolder' Name='PFiles'>
@@ -117,7 +117,7 @@
 		  Minimum="1.0.0" 
 		  IncludeMinimum="yes"
 		  OnlyDetect="no"
-		  Maximum="1.0.2"
+		  Maximum="1.0.3"
 		  IncludeMaximum="no"
 		  Property="PREVIOUSVERSIONSINSTALLED"
 		  />

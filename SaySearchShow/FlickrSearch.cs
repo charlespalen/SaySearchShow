@@ -41,6 +41,7 @@ namespace FlickrKinectPhotoFun
             searchOptions.Extras = PhotoSearchExtras.AllUrls | PhotoSearchExtras.Description | PhotoSearchExtras.OwnerName;
             searchOptions.SortOrder = PhotoSearchSortOrder.Relevance;
             searchOptions.Tags = _searchTerms;
+            searchOptions.Text = _searchTerms;
 
             _fLib.PhotosSearchAsync(searchOptions, r =>
             {

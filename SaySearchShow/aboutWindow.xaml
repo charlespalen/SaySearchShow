@@ -5,7 +5,7 @@
     <Grid>
         <StackPanel Margin="5,0,0,0">
             <TextBlock HorizontalAlignment="Center" Text="Say Search Show" FontSize="15" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Center" Foreground="Black" TextOptions.TextRenderingMode="Aliased"/>
-            <TextBlock HorizontalAlignment="Center" Text="1.0.3 Alpha Release Supporting Kinect For Windows" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Center" Foreground="Black" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock HorizontalAlignment="Center" Text="1.0.3 Release Supporting Kinect For Windows" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Center" Foreground="Black" TextOptions.TextRenderingMode="Aliased"/>
             <TextBlock HorizontalAlignment="Left" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" TextWrapping="Wrap" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased">
             Say search show is a fun application that allows users to search the full plethora of Flickr with simple voice commands. It was designed for display on projectors or large format monitors.
             </TextBlock>
@@ -14,7 +14,7 @@
             To use this application simply say the words "Kinect Show" followed by your search terms. For best results, wait for the user interface to display how many results were found before preforming another search.
                 For optimal voice recognition, use a Kinect For Windows Sensor. If Kinect For Windows isn't available, use the best microphone you have and carefully adjust gain levels.
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Text="Updated: 4/22/2013" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" Foreground="Black" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased"/>
+            <TextBlock HorizontalAlignment="Left" Text="Updated: 5/22/2013" FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" TextAlignment="Left" Foreground="Black" Margin="0,5,0,0" TextOptions.TextRenderingMode="Aliased"/>
             <TextBlock FontSize="10" FontFamily="HelveticaNeueLTStd-Lt.otf#Helvetica Neue LT Std" Foreground="Black" TextOptions.TextRenderingMode="Aliased">
                 Website:
             <Hyperlink NavigateUri="http://www.technogumbo.com/projects/say-search-show/" RequestNavigate="Hyperlink_RequestTGO" TextOptions.TextRenderingMode="Aliased">
